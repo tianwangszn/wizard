@@ -1,5 +1,4 @@
 #coding:utf-8
-
 import random
 
 def dealcard(num,alreadycard=[]):
@@ -98,16 +97,16 @@ class NPC(player):
             
     
 def maingame():
-    print "æ¬¢è¿æ¥åˆ°ç¥æœºå¦™ç®—æ¸¸æˆï¼"
-    print "-by å¤©æœ›"
+    print "»¶Ó­À´µ½Éñ»úÃîËãÓÎÏ·£¡"
+    print "-by ÌìÍû"
     while 1:
-        noplayer = raw_input("è¯·è¾“å…¥æ¸¸æˆäººæ•°ï¼ˆ2-6ï¼‰ï¼š")
+        noplayer = raw_input("ÇëÊäÈëÓÎÏ·ÈËÊı£¨2-6£©£º")
         try:
             noplayer = int(noplayer)
         except:
-            print "è¯·è¾“å…¥æ•°å­—"
+            print "ÇëÊäÈëÊı×Ö"
         if noplayer<1 or noplayer>7:
-            print "è¯·è¾“å…¥2-6ä¹‹é—´çš„æ•°å­—"
+            print "ÇëÊäÈë2-6Ö®¼äµÄÊı×Ö"
             continue
         break 
             
@@ -137,16 +136,17 @@ def maingame():
             
         
         
-        print "å½“å‰ä¸ºç¬¬%dè½®ï¼Œé¦–å…ˆå‡ºç‰Œè€…ä¸º%s" % (i+1,npc[banker].name)
-        print "æ‚¨çš„æ‰‹ç‰Œä¸ºï¼š"
+        print "µ±Ç°ÎªµÚ%dÂÖ£¬Ê×ÏÈ³öÅÆÕßÎª%s" % (i+1,npc[banker].name)
+        print "ÄúµÄÊÖÅÆÎª£º"
+        npc[0].sortcard()
         print npc[0].card
         while 1:
-            a= raw_input("è¯·è¾“å…¥æ‚¨æœ¬è½®æ‰€å«å¢©æ•°ï¼š")
+            a= raw_input("ÇëÊäÈëÄú±¾ÂÖËù½Ğ¶ÕÊı£º")
             try:
                 npc[0].notrick=int(a)
                 break
             except:
-                print " è¯·è¾“å…¥æ•°å­—"
+                print " ÇëÊäÈëÊı×Ö"
         
         
     
